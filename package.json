@@ -1,0 +1,26 @@
+{
+  "name": "sharpener_package",
+  "version": "1.0.0",
+  "description": "diksha",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon test_server_req_res.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gitgist37/Node.js_SharpenerActive.git"
+  },
+  "keywords": [
+    "backend"
+  ],
+  "author": "diksha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gitgist37/Node.js_SharpenerActive/issues"
+  },
+  "homepage": "https://github.com/gitgist37/Node.js_SharpenerActive#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  }
+}
