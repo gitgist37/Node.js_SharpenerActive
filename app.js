@@ -1,17 +1,20 @@
 const express = require('express');
+const bodyParser = require('body-parser');
+const path = require('path');
+const adminRoutes = require('./routes_2/admin');
+const shopRoutes = require('./routes_2/user');
 
 const app = express();
+app.use(bodyParser.urlencoded({extended:false}));
+
+app.use(adminRoutes);
+app.use(shopRoutes);
 
 app.use((req,res,next)=>
 {
-    console.log('Im in this middleware!');
-    next();
+    res.status(404).sendFile(path.join(__dirname,'../','Front_view','404_.html'));
 });
 
-app.use((req,res,next)=>
-{
-    console.log('Im in this middleware too!');
-    res.send('<h1>Hello from Express!</h1>') // we can always override this line by manually setting header to a different value in the earlier line.
-});
 
-app.listen(4000);
+app.listen(2000);
+
