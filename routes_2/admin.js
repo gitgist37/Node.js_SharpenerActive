@@ -1,21 +1,11 @@
 const express = require('express');
-const path = require('path');
+const { AddProductPage } = require('../controllers_2/product');
+const { ContactUsPage } = require('../controllers_2/contact_us');
 const router = express.Router();
 
-router.get('/add-product',(req,res,next)=>
-{
-    res.sendFile(path.join(__dirname,'../','Front_view','add_product.html'));
-});
+router.get('/add-product',AddProductPage);
 
-router.get('/contact-us',(req,res,next)=>
-{
-    res.sendFile(path.join(__dirname,'../','Front_view','contact_us_form.html'));
-});
-
-
-
-
-
+router.get('/contact-us',ContactUsPage);
 
 
 module.exports = router;
