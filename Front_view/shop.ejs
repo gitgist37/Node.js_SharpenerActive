@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="/">Shop</a></li>
+                <li><a href="/add-product">Add Product</a></li>
+                <li><a href="/contact-us">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Products List</h1>
+        <p id="add_here">List of all the products...</p>
+        <ul>
+            <% for(let i=0;i<value_type.length;i++){ %>
+                <li><%= value_type[i].title %></li>
+            <%}%>
+        </ul>
+    </main>
+</body>
+</html>
